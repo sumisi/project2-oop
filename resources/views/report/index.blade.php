@@ -29,11 +29,10 @@
     </div> 
         <div class="grid grid-cols-4 gap-2 place-items-center">
             @foreach($reports as $report)
-            <div class="bg-amber-300 h-[300px] p-[10px]">
+            <div class="bg-amber-300 h-[300px] p-[10px] w-[300px]">
                 {{$report->number}}<br>
                 {{$report->des}}<br>
                 {{$report->created_at}}<br>
-                {{$report->status->name}}<br>
                 <a href="{{route('reports.edit', $report->id)}}">
                     Изменить заявку
                 </a><br>
