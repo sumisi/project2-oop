@@ -30,7 +30,7 @@
                     </td>
                     <td class="px-6 py-4 text-sm whitespace-nowrap">
                         <span class="px-2 py-1 rounded-full text-xs font-semibold bg-amber-100 text-amber-800">
-                            {{ $report->status->name ?? 'Без статуса' }}
+                            {{ $report->status->name}}
                         </span>
                     </td>
                     <td class="px-6 py-4 text-sm text-center whitespace-nowrap">
