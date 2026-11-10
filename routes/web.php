@@ -3,7 +3,9 @@
 use App\Http\Controllers\MainController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ReportController;
+use App\Http\Controllers\AdminController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Middleware\Admin;
 
 
 Route::get('/dashboard', function () {
@@ -34,5 +36,10 @@ Route::get('/arrya/shuffle',[MainController::class, 'shuffleArray'])->name('arry
 Route::get('/arrya/sort',[MainController::class, 'sortArray'])->name('arrya.sort');
 
 Route::get('/arrya/filter',[MainController::class, 'filterArray'])->name('arrya.filter');
+
+Route::middleware((Admin::class))->group(function(){
+    Route::get('/admin', [AdminController::class, 'index'])->name('admin.index');
+});
+
 
 require __DIR__.'/auth.php';

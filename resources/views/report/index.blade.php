@@ -1,3 +1,4 @@
+@vite(['resources/css/app.css', 'resources/js/app.js'])
 <x-app-layout>
     <body>
     <h1 class="text-[40px]">Заявки</h1>
